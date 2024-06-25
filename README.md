@@ -34,7 +34,7 @@ Once the tool is running, you can perform the following actions:
 
 Here's an example of how to use the Graph Plotter:
 
-![Demo Video](img/demo.mov)
+![Demo Video](img/demo.mp4)
 
 
 ## Known Issues
