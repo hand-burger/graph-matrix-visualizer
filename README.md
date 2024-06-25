@@ -34,7 +34,8 @@ Once the tool is running, you can perform the following actions:
 
 Here's an example of how to use the Graph Plotter:
 
-![](src/demo.mov)
+![Demo Video](img/demo.mov)
+
 
 ## Known Issues
 - Left-click only works when the mouse is moving
