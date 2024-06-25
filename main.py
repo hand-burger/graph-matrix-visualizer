@@ -11,7 +11,7 @@ class GraphPlotter:
         self.window.resizable(False, False)
 
         # Set up canvas
-        self.canvas = Canvas(window, width=800, height=800, highlightthickness=0)
+        self.canvas = Canvas(window, width=1200, height=800, highlightthickness=0)
         self.canvas.pack()
 
         self.vertices = []
@@ -26,6 +26,8 @@ class GraphPlotter:
         self.canvas.bind("<Button-2>", self.plot_edge) # Right click
         self.button = Button(window, text="Save graph", command=self.save_graph)
         self.button.place(x=0, y=0)
+        self.clearButton = Button(window, text="Clear", command=self.clear)
+        self.clearButton.place(x=0, y=30)
 
         self.canvas.focus_set()
 
@@ -77,6 +79,13 @@ class GraphPlotter:
         eigenvalues = np.linalg.eigvals(matrix)
         print("Eigenvalues:")
         print(eigenvalues)
+    
+    def clear(self):
+        self.canvas.delete("all")
+        self.vertices = []
+        self.edges = []
+        self.toggled = False
+        self.firstVertex = None
 
 # Redirect stderr to /dev/null to suppress MacOS warnings
 f = open("/dev/null", "w")
