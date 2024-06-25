@@ -34,7 +34,7 @@ Once the tool is running, you can perform the following actions:
 
 Here's an example of how to use the Graph Plotter:
 
-![Demo Video](https://github.com/hand-burger/graph-matrix-visualizer/blob/master/img/demo.mp4)
+https://github.com/hand-burger/graph-matrix-visualizer/assets/84483508/3c7420a2-2d08-43c7-a0ed-7ff6b188922a
 
 
 ## Known Issues
