@@ -17,6 +17,11 @@ class GraphPlotter:
         self.vertices = []
         self.edges = []
 
+        self.canvas.create_text(600, 400, text="Left click to plot a vertex", font=("Arial", 20))
+        self.canvas.create_text(600, 420, text="Right click to plot an edge", font=("Arial", 20))
+
+        self.count = 1
+
         # For edge plotting
         self.toggled = False
         self.firstVertex = None
@@ -37,7 +42,9 @@ class GraphPlotter:
         for vertex in self.vertices:
             if abs(vertex[0] - x) < 10 and abs(vertex[1] - y) < 10:
                 return
-        self.canvas.create_oval(x-5, y-5, x+5, y+5, fill="black")
+        self.canvas.create_oval(x-8, y-8, x+8, y+8, fill="black")
+        self.canvas.create_text(x, y, text=str(self.count), font=("Arial", 10), fill="red")
+        self.count += 1
         self.vertices.append((x, y))
 
     def plot_edge(self, event):
@@ -86,6 +93,7 @@ class GraphPlotter:
         self.edges = []
         self.toggled = False
         self.firstVertex = None
+        self.count = 1
 
 # Redirect stderr to /dev/null to suppress MacOS warnings
 f = open("/dev/null", "w")
